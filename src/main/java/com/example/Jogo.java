@@ -27,7 +27,21 @@ public class Jogo {
     }
 
     public String resultado() {
-        
+        if(acabou()==true){
+            if(jogador.getPontos() > 21){
+                return "Computador ganhou!";
+            }
+            else if(computador.getPontos()>21){
+                return "Jogador ganhou!"
+            }
+            else if(21-jogador.getPontos()<computador.getPontos()){
+                return "Joagador ganhou!";
+            }
+            else if(21-computador.getPontos()<jogador.getPontos()){
+                return "computador ganhou!";
+            }
+        return null;
+        }
     }
 
     public Jogador getJogador() {
